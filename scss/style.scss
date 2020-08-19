@@ -496,6 +496,11 @@ footer{
 		color: $grey_color;
 		font-size: 10px;
 		line-height: 30px;
+		transition: .2s color ease;
+		cursor: pointer;
+		&:hover{
+			color: $red_color;
+		}
 	}
 }
 
@@ -520,13 +525,25 @@ footer{
 	background: white;
 	width: 130px;
 	height: 50px;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin-right: 10px;
 	display: flex;
 	flex-direction: row;
 	color: $red_color;
 	font-size: 25px;
 	@extend %centered;
+	transition: .2s background ease;
+	cursor: pointer;
+	&:hover{
+		background: $red_color;
+		color: white;
+		p{
+			color: white;
+		}
+		h1{
+			color: white;
+		}
+	}
 	i{
 		margin-right: 8px;
 	}
@@ -563,6 +580,7 @@ footer{
 	margin-right: 10px;
 	@extend %centered;
 	cursor: pointer;
+	transition: .5s ease background;
 	&:hover{
 		background: $red_color;
 	}

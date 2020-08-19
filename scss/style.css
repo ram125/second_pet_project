@@ -381,7 +381,11 @@ footer {
   .f_column p {
     color: #888888;
     font-size: 10px;
-    line-height: 30px; }
+    line-height: 30px;
+    transition: .2s color ease;
+    cursor: pointer; }
+    .f_column p:hover {
+      color: #ff5353; }
 
 .mobile_app {
   display: flex;
@@ -400,12 +404,21 @@ footer {
   background: white;
   width: 130px;
   height: 50px;
-  border-radius: 3px;
+  border-radius: 5px;
   margin-right: 10px;
   display: flex;
   flex-direction: row;
   color: #ff5353;
-  font-size: 25px; }
+  font-size: 25px;
+  transition: .2s background ease;
+  cursor: pointer; }
+  .ma_button:hover {
+    background: #ff5353;
+    color: white; }
+    .ma_button:hover p {
+      color: white; }
+    .ma_button:hover h1 {
+      color: white; }
   .ma_button i {
     margin-right: 8px; }
   .ma_button h1 {
@@ -433,7 +446,8 @@ footer {
   height: 30px;
   width: 30px;
   margin-right: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: .5s ease background; }
   .ma_fubu:hover {
     background: #ff5353; }
   .ma_fubu:hover i {
