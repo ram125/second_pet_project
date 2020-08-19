@@ -13,7 +13,7 @@ body {
   flex-direction: row;
   align-items: center; }
 
-.shop_now_button, .poping_button_0, .poping_button_1, .poping_button_2, .mp_slider_control, .features, .feature, .tp_row, .fu_content, .fu_soc_net, .ma_button, .ma_fubu, .copyright {
+.shop_now_button, .poping_button, .mp_slider_control, .features, .feature, .tp_row, .fu_content, .fu_soc_net, .ma_button, .ma_fubu, .copyright {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -33,13 +33,48 @@ body {
     font-size: 35px;
     color: #ff5353; }
 
-.nav_bar span {
-  margin: 0 20px;
-  text-transform: uppercase;
-  font-size: 13px;
-  cursor: pointer; }
-  .nav_bar span:hover {
-    color: #ff5353; }
+.nav_bar {
+  display: flex;
+  flex-direction: row; }
+  .nav_bar span {
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer; }
+    .nav_bar span i {
+      color: black; }
+    .nav_bar span:hover {
+      color: #ff5353; }
+
+.home_menu {
+  height: 150px;
+  width: 200px;
+  display: none;
+  background: white;
+  position: absolute;
+  bottom: -150px;
+  list-style-type: none;
+  flex-direction: column;
+  color: black; }
+  .home_menu li {
+    padding: auto 0;
+    padding-left: 10px;
+    width: 95%;
+    height: 33.3%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease background; }
+    .home_menu li:hover {
+      background: #EEE;
+      color: #ff5353; }
+  .home_menu:hover {
+    display: flex;
+    color: black; }
+
+.home {
+  position: relative; }
+  .home:hover .home_menu {
+    display: flex; }
 
 .buttons span {
   font-size: 17px;
@@ -129,7 +164,7 @@ body {
 .third {
   left: 65%; }
 
-.poping_button_0, .poping_button_1, .poping_button_2 {
+.poping_button {
   background: white;
   width: 50px;
   height: 50px;
@@ -138,7 +173,7 @@ body {
   position: absolute;
   transform: translateX(-50%);
   transition: .2s ease bottom, .2s ease opacity, .5s ease background, .5s ease color; }
-  .poping_button_0:hover, .poping_button_1:hover, .poping_button_2:hover {
+  .poping_button:hover {
     background: #ff5353;
     color: white; }
 
@@ -216,6 +251,12 @@ body {
   justify-content: center; }
   .mp_cards .products {
     width: 260px; }
+  .mp_cards .first {
+    left: 30%; }
+  .mp_cards .second {
+    left: 50%; }
+  .mp_cards .third {
+    left: 70%; }
 
 .mp_slider_control .active {
   background: #ff5353; }
@@ -268,6 +309,12 @@ body {
   margin-top: 80px; }
   .tp_row .products {
     width: 260px; }
+  .tp_row .first {
+    left: 30%; }
+  .tp_row .second {
+    left: 50%; }
+  .tp_row .third {
+    left: 70%; }
 
 /*silon journal*/
 .silon_journal {
@@ -297,7 +344,11 @@ body {
   .pof_news h1 {
     color: black;
     font-size: 14px;
-    line-height: 25px; }
+    line-height: 25px;
+    transition: .3s ease color;
+    cursor: pointer; }
+    .pof_news h1:hover {
+      color: #ff5353; }
   .pof_news:after {
     content: "";
     width: 360px;
@@ -314,7 +365,16 @@ body {
     margin-right: 10px; }
   .pof_com_wf * {
     color: #888888;
-    font-size: 11px; }
+    font-size: 11px;
+    transition: .2s ease color; }
+  .pof_com_wf div {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row; }
+    .pof_com_wf div:hover p {
+      color: #ff5353; }
+    .pof_com_wf div:hover i {
+      color: #ff5353; }
 
 .date {
   font-size: 10px;
@@ -352,9 +412,28 @@ body {
   width: 260px;
   margin: 0 15px;
   background: #888888;
-  transition: .2s ease background; }
-  .fu_soc_net:hover {
-    background: #ff5353; }
+  transition: .2s ease background;
+  position: relative; }
+  .fu_soc_net i {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translateX(50%) translateY(50%);
+    opacity: 0;
+    transition: .5s ease opacity; }
+  .fu_soc_net div {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+    background: #ff5353;
+    opacity: 0;
+    transition: .5s ease opacity, .2s ease height; }
+  .fu_soc_net:hover div {
+    opacity: 0.7;
+    height: 100%; }
+  .fu_soc_net:hover i {
+    opacity: 1; }
 
 /*footer*/
 footer {

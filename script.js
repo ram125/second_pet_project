@@ -1,3 +1,7 @@
+
+let the_button = [];
+let poping_button = [];
+
 let current = [false, false, false];
 let previous = [false, false, false];
 
@@ -8,13 +12,6 @@ let somefunc = (poping_button, the_button, i) => {
 let secsomefunc = (poping_button, i) => {
 	current[i] = false;
 };
-
-let the_button = new Array;
-let poping_button = new Array;
-poping_button[0] = new Array;
-poping_button[1] = new Array;
-poping_button[2] = new Array;
-
 
 function func(i){
 	the_button[i] = document.getElementById("container_"+i);
@@ -36,7 +33,7 @@ function func(i){
 						poping_button[i][counter].classList.add("active");
 						counter++;
 						if(current[i] == false){
-							for(b = 0; b<poping_button.length; b++){
+							for(b = 0; b<3; b++){
 								poping_button[i][b].classList.remove("active");
 								poping_button[i][b].classList.add("unactive");
 							}
@@ -47,7 +44,7 @@ function func(i){
 				}, 40);
 				previous[i] = true;
 			}else{
-				for(b = 0; b<poping_button.length; b++){
+				for(b = 0; b<3; b++){
 					poping_button[i][b].classList.remove("active");
 					poping_button[i][b].classList.add("unactive");
 				}
@@ -57,6 +54,6 @@ function func(i){
 	}, 100);
 };
 
-func(0);
-func(1);
-func(2);
+for(let k=0; k<15; k++){
+	func(k)
+}
