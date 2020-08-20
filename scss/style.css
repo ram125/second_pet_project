@@ -87,8 +87,14 @@ body {
 /*lower header*/
 .lower_header {
   width: 100%;
-  height: 790px;
+  height: auto;
   background: url(../img/header/background.jpg); }
+
+.woman_image {
+  width: 50%; }
+  .woman_image img {
+    width: 100%;
+    height: auto; }
 
 .header_shop_now {
   width: 50%;
@@ -130,6 +136,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .featured_product .products {
+    width: 30%; }
+    .featured_product .products img {
+      width: 100%;
+      height: auto; }
 
 .title {
   margin-top: 150;
@@ -142,7 +153,6 @@ body {
   flex-direction: row; }
 
 .products {
-  width: 360px;
   background: grey;
   margin: 0 30px;
   position: relative;
@@ -151,8 +161,8 @@ body {
     height: 450px;
     width: 360px; }
   .products .m_popular {
-    width: 260px;
-    height: 340px;
+    width: 100%;
+    height: auto;
     background: grey; }
 
 .first {
@@ -214,8 +224,11 @@ body {
   background: #eae2d8;
   width: 100%;
   display: flex;
-  height: 630px;
+  height: auto;
   align-items: center; }
+  .sales img {
+    width: 50%;
+    height: auto; }
 
 .offer {
   margin-left: 20%;
@@ -249,8 +262,11 @@ body {
 .mp_cards {
   display: flex;
   justify-content: center; }
+  .mp_cards img {
+    width: 100%;
+    height: auto; }
   .mp_cards .products {
-    width: 260px; }
+    width: 23%; }
   .mp_cards .first {
     left: 30%; }
   .mp_cards .second {
@@ -276,7 +292,7 @@ body {
 .feature {
   flex-direction: column;
   margin: 0 15px;
-  width: 250px; }
+  width: 22%; }
   .feature:after, .feature:before {
     content: "";
     height: 2px;
@@ -308,7 +324,7 @@ body {
 .tp_row {
   margin-top: 80px; }
   .tp_row .products {
-    width: 260px; }
+    width: 22%; }
   .tp_row .first {
     left: 30%; }
   .tp_row .second {
@@ -333,8 +349,8 @@ body {
     margin: 0 15px; }
 
 .img_journal {
-  height: 350px;
-  width: 360px;
+  height: auto;
+  width: 100%;
   background: grey;
   margin-bottom: 35px; }
 
@@ -351,7 +367,7 @@ body {
       color: #ff5353; }
   .pof_news:after {
     content: "";
-    width: 360px;
+    width: 30%;
     height: 1px;
     background: #e1e1e1;
     margin: 20px 0; }
@@ -408,12 +424,15 @@ body {
 
 .fu_soc_net {
   cursor: pointer;
-  height: 250px;
-  width: 260px;
+  height: auto;
+  width: 20%;
   margin: 0 15px;
   background: #888888;
   transition: .2s ease background;
   position: relative; }
+  .fu_soc_net img {
+    width: 100%;
+    height: auto; }
   .fu_soc_net i {
     position: absolute;
     right: 50%;
@@ -442,7 +461,7 @@ footer {
   padding-top: 10px; }
 
 .footer_content {
-  width: 1175px;
+  width: 100%;
   height: 230px;
   margin: 90px auto 0;
   display: flex;
@@ -456,7 +475,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 300px; }
+  width: 22%; }
+  .f_column:first-child {
+    margin-left: 5%; }
   .f_column p {
     color: #888888;
     font-size: 10px;
@@ -515,7 +536,7 @@ footer {
 
 .line {
   margin: 30px auto;
-  width: 1170px;
+  width: 80%;
   height: 1px;
   background: #888888;
   display: block; }
@@ -542,5 +563,20 @@ footer {
   .copyright a {
     color: #ff5353;
     text-decoration: none; }
+
+@media (max-width: 1024px) {
+  .woman_image {
+    width: 50%; }
+    .woman_image img {
+      width: 100%; } }
+/*
+max-width: 1770px
+max-width: 1440px
+max-width: 1024px
+max-width: 768px
+max-width: 425px
+max-width: 375px
+max-width: 320px
+*/
 
 /*# sourceMappingURL=style.css.map */

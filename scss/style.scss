@@ -114,9 +114,17 @@ $grey_color: #888888;
 /*lower header*/
 .lower_header{
 	width: 100%;
-	height: 790px;
+	height: auto;
 	background: url(../img/header/background.jpg);
 	@extend %direction_row;
+}
+
+.woman_image{
+	width: 50%;
+	img{
+		width: 100%;
+		height: auto;
+	}
 }
 
 .header_shop_now{
@@ -170,6 +178,13 @@ $grey_color: #888888;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	.products{
+		width: 30%;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
 }
 
 .title{
@@ -185,7 +200,6 @@ $grey_color: #888888;
 }
 
 .products{
-	width: 360px;
 	background: grey;
 	margin: 0 30px;
 	position: relative;
@@ -195,8 +209,8 @@ $grey_color: #888888;
 		width: 360px;
 	}
 	.m_popular{
-		width: 260px;
-		height: 340px;
+		width: 100%;
+		height: auto;
 		background: grey;
 	}
 }
@@ -273,8 +287,12 @@ $grey_color: #888888;
 	background: #eae2d8;
 	width: 100%;
 	display: flex;
-	height: 630px;
+	height: auto;
 	align-items: center;
+	img{
+		width: 50%;
+		height: auto;
+	}
 }
 
 .offer{
@@ -317,8 +335,12 @@ $grey_color: #888888;
 .mp_cards{
 	display: flex;
 	justify-content: center;
+	img{
+		width: 100%;
+		height: auto;
+	}
 	.products{
-		width: 260px;
+		width: 23%;
 	}
 	.first{
 		left: 30%;
@@ -360,7 +382,7 @@ $grey_color: #888888;
 	@extend %centered;
 	flex-direction: column;
 	margin: 0 15px;
-	width: 250px;
+	width: 22%;
 	&:after, &:before{
 		content: "";
 		height: 2px;
@@ -401,7 +423,7 @@ $grey_color: #888888;
 	@extend %centered;
 	margin-top: 80px;
 	.products{
-		width: 260px;
+		width: 22%;
 	}
 	.first{
 		left: 30%;
@@ -438,8 +460,8 @@ $grey_color: #888888;
 }
 
 .img_journal{
-	height: 350px;
-	width: 360px;
+	height: auto;
+	width: 100%;
 	background: grey;
 	margin-bottom: 35px;
 }
@@ -459,7 +481,7 @@ $grey_color: #888888;
 	}
 	&:after{
 		content: "";
-		width: 360px;
+		width: 30%;
 		height: 1px;
 		background: #e1e1e1;
 		margin: 20px 0;
@@ -534,13 +556,17 @@ $grey_color: #888888;
 
 .fu_soc_net{
 	cursor: pointer;
-	height: 250px;
-	width: 260px;
+	height: auto;
+	width: 20%;
 	margin: 0 15px;
 	background: $grey_color;
 	transition: .2s ease background;
 	position: relative;
 	@extend %centered;
+	img{
+		width: 100%;
+		height: auto;
+	}
 	i{
 		position: absolute;
 		right: 50%;
@@ -576,7 +602,7 @@ footer{
 }
 
 .footer_content{
-	width: 1175px;
+	width: 100%;
 	height: 230px;
 	margin: 90px auto 0;
 	display: flex;
@@ -594,7 +620,10 @@ footer{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 300px;
+	width: 22%;
+	&:first-child{
+		margin-left: 5%;
+	}
 	p{
 		color: $grey_color;
 		font-size: 10px;
@@ -670,7 +699,7 @@ footer{
 
 .line{
 	margin: 30px auto;
-	width: 1170px;
+	width: 80%;
 	height: 1px;
 	background: $grey_color;
 	display: block;
@@ -707,3 +736,22 @@ footer{
 		text-decoration: none;
 	}
 }
+
+@media(max-width: 1024px){
+	.woman_image{
+		width: 50%;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+/*
+max-width: 1770px
+max-width: 1440px
+max-width: 1024px
+max-width: 768px
+max-width: 425px
+max-width: 375px
+max-width: 320px
+*/
