@@ -268,7 +268,7 @@ body {
     width: 100%;
     height: auto; }
   .mp_cards .products {
-    width: 23%; }
+    width: 260px; }
   .mp_cards .first {
     left: 30%; }
   .mp_cards .second {
@@ -294,7 +294,7 @@ body {
 .feature {
   flex-direction: column;
   margin: 0 15px;
-  width: 22%; }
+  width: 250px; }
   .feature:after, .feature:before {
     content: "";
     height: 2px;
@@ -600,7 +600,40 @@ footer {
     margin: 0; }
 
   .shop_now_container {
-    font-size: 30px; } }
+    font-size: 30px; }
+
+  .mp_cards .products {
+    width: 23%; }
+
+  .feature {
+    width: 22%; } }
+@media (max-width: 425px) {
+  .featured_product_container, .sales, .journal_content,
+  .mp_cards, .features, .tp_row, .fu_content, footer,
+  .footer_content, .lower_header {
+    flex-direction: column; }
+
+  .featured_product .products, .mp_cards .products, .tp_row .products {
+    width: 90%; }
+
+  .mp_cards .products, .featured_product .products {
+    margin: 0; }
+
+  .features, .footer_content, footer, .silon_journal {
+    height: auto; }
+
+  .feature, .fu_content, .fu_row {
+    width: 90%; }
+
+  .nav_bar {
+    display: none; }
+
+  .footer_content {
+    margin-left: 20px; }
+    .footer_content .f_column:first-child {
+      margin: 0; }
+    .footer_content * {
+      margin: 0; } }
 /*
 max-width: 1770px
 max-width: 1440px

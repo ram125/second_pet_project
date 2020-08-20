@@ -342,7 +342,7 @@ $grey_color: #888888;
 		height: auto;
 	}
 	.products{
-		width: 23%;
+		width: 260px;
 	}
 	.first{
 		left: 30%;
@@ -384,7 +384,7 @@ $grey_color: #888888;
 	@extend %centered;
 	flex-direction: column;
 	margin: 0 15px;
-	width: 22%;
+	width: 250px;
 	&:after, &:before{
 		content: "";
 		height: 2px;
@@ -780,6 +780,55 @@ footer{
 	}
 	.shop_now_container{
 		font-size: 30px;
+	}
+	.mp_cards{
+		.products{
+			width: 23%;
+		}
+	}
+	.feature{
+		width: 22%;
+	}
+}
+
+@media(max-width: 425px){
+	.featured_product_container, .sales, .journal_content,
+	.mp_cards, .features, .tp_row, .fu_content, footer, 
+	.footer_content, .lower_header{
+		flex-direction: column;
+	}
+
+	.featured_product, .mp_cards, .tp_row{
+		.products{
+			width: 90%;
+		}
+	}
+
+	.mp_cards, .featured_product{
+		.products{
+			margin: 0;
+		}
+	}
+
+	.features, .footer_content, footer, .silon_journal{
+		height: auto;
+	}
+	.feature, .fu_content, .fu_row{
+		width: 90%;
+	}
+
+	.nav_bar{
+		display: none;
+	}
+
+	.footer_content{
+		margin-left: 20px;
+		.f_column:first-child{
+			margin: 0;
+		}
+		*{
+			margin: 0;
+		}
 	}
 }
 
