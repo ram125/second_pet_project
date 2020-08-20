@@ -152,7 +152,7 @@ $grey_color: #888888;
 
 .shop_now_button{
 	cursor: pointer;
-	margin-top: 20px;
+	margin: 20px 0;
 	width: 170px;
 	height: 50px;
 	background: $red_color;
@@ -309,6 +309,7 @@ $grey_color: #888888;
 	font-family: 'Dancing Script', cursive;
 	font-size: 85px;
 	text-transform: uppercase;
+	margin-top: 50px;
 }
 
 .offer_body{
@@ -323,7 +324,7 @@ $grey_color: #888888;
 
 .most_popular{
 	width: 100%;
-	height: 900px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	*{
@@ -335,6 +336,7 @@ $grey_color: #888888;
 .mp_cards{
 	display: flex;
 	justify-content: center;
+	margin-bottom: 100px;
 	img{
 		width: 100%;
 		height: auto;
@@ -386,7 +388,7 @@ $grey_color: #888888;
 	&:after, &:before{
 		content: "";
 		height: 2px;
-		width: 250px;
+		width: 100%;
 		background: #ebeef0;
 	}
 	i{
@@ -538,16 +540,24 @@ $grey_color: #888888;
 
 .follow_us{
 	width: 100%;
-	height: 670px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.fu_row{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	@extend %centered;
 }
 
 .fu_content{
 	@extend %centered;
 	flex-direction: row;
 	margin-bottom: 150px;
+	flex-direction: row;
 	i{
 		color: white;
 		font-size: 30px;
@@ -557,7 +567,7 @@ $grey_color: #888888;
 .fu_soc_net{
 	cursor: pointer;
 	height: auto;
-	width: 20%;
+	width: 70%;
 	margin: 0 15px;
 	background: $grey_color;
 	transition: .2s ease background;
@@ -743,6 +753,33 @@ footer{
 		img{
 			width: 100%;
 		}
+	}
+}
+
+@media(max-width: 768px){
+	.pof_com_wf{
+	    display: flex;
+	    flex-direction: column;
+	}
+	.fu_row{
+		flex-direction: column
+	}
+	.fu_soc_net{
+		margin: 15px 0;
+	}
+	.fu_content{
+		margin-bottom: 100px;
+	}
+	.offer_title{
+		font-size: 55px;
+		margin: 20px 0;
+	}
+	.offer_body{
+		font-size: 25px;
+		margin: 0;
+	}
+	.shop_now_container{
+		font-size: 30px;
 	}
 }
 
