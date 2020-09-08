@@ -612,7 +612,7 @@ footer{
 }
 
 .footer_content{
-	width: 100%;
+	width: 1170px;
 	height: 230px;
 	margin: 90px auto 0;
 	display: flex;
@@ -709,7 +709,7 @@ footer{
 
 .line{
 	margin: 30px auto;
-	width: 80%;
+	width: 1170px;
 	height: 1px;
 	background: $grey_color;
 	display: block;
@@ -753,6 +753,12 @@ footer{
 		img{
 			width: 100%;
 		}
+	}
+	.footer_content{
+		width: 90%;
+	}
+	.line{
+		width: 80%;
 	}
 }
 
@@ -798,7 +804,7 @@ footer{
 		flex-direction: column;
 	}
 
-	.featured_product, .mp_cards, .tp_row{
+	.featured_product, .tp_row{
 		.products{
 			width: 90%;
 		}
@@ -821,6 +827,59 @@ footer{
 		display: none;
 	}
 
+	.header_shop_now{
+		width: 70%;
+	}
+
+	.shop_now_title{
+		margin: 40px 0 15px 0;
+		letter-spacing: 2.5px;
+	}
+
+	.shop_now_container{
+		font-weight: 500;
+		font-size: 35px;
+	}
+
+	.header_shop_now{
+		position: relative;
+		order: 1;
+	}
+
+	.woman_image{
+		position: relative;
+		order: 0;
+		width: 90%;
+	}
+
+	.shop_now_button{
+		margin: 35px 0
+	}
+
+	.featured_product_container{
+		align-items: center;
+	}
+
+	.offer{
+		margin: auto;
+	}
+
+	.sales img{
+		width: 90%;
+	}
+
+	.mp_cards{
+		width: 100%;
+		align-items: center;
+		.products{
+			width: 70%;
+		}
+	}
+
+	.journal_content .journal_row{
+		margin: 0 15px 30px;
+	}
+
 	.footer_content{
 		margin-left: 20px;
 		.f_column:first-child{
@@ -829,6 +888,52 @@ footer{
 		*{
 			margin: 0;
 		}
+	}
+	.footer_content{
+		h1{
+			font-size: 18px;
+			margin: 20px 0;
+    	}
+	}
+
+	.ma_button{
+		width: 48%;
+		margin: auto;
+		h1{
+			font-size: 10px;
+			margin: 0;
+		}
+	}
+
+	.mobile_app{
+		.line{
+			width: 100%;
+		}
+		p{
+			font-size: 15px;
+		}
+	}
+
+	.ma_fubu{
+		margin: 0 5px;
+	}
+
+	.fu_soc_net{
+		width: 90%;
+	}
+
+
+	.f_column{
+		width: auto;
+		p{
+			font-weight: 400;
+			font-size: 15px;
+		}
+	}
+
+	.copyright{
+		font-size: 12px;
+		margin: 10px 0;
 	}
 }
 
