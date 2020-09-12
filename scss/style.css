@@ -46,7 +46,7 @@ body {
     .nav_bar span:hover {
       color: #ff5353; }
 
-.home_menu {
+.home_menu, .mobile_menu {
   height: 150px;
   width: 200px;
   display: none;
@@ -56,7 +56,7 @@ body {
   list-style-type: none;
   flex-direction: column;
   color: black; }
-  .home_menu li {
+  .home_menu li, .mobile_menu li {
     padding: auto 0;
     padding-left: 10px;
     width: 95%;
@@ -64,25 +64,56 @@ body {
     display: flex;
     align-items: center;
     transition: .2s ease background; }
-    .home_menu li:hover {
+    .home_menu li:hover, .mobile_menu li:hover {
       background: #EEE;
       color: #ff5353; }
-  .home_menu:hover {
+  .home_menu:hover, .mobile_menu:hover {
     display: flex;
     color: black; }
+
+.mobile_menu {
+  width: 100px;
+  bottom: -188px;
+  left: -40px;
+  z-index: 10; }
+  .mobile_menu li {
+    background: white; }
 
 .home {
   position: relative; }
   .home:hover .home_menu {
     display: flex; }
 
-.buttons span {
-  font-size: 17px;
-  cursor: pointer; }
-  .buttons span:nth-child(2) {
-    margin: 30px; }
-  .buttons span:hover {
-    color: #ff5353; }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .buttons span {
+    font-size: 17px;
+    cursor: pointer; }
+    .buttons span:nth-child(3) {
+      margin: 20px; }
+    .buttons span:hover {
+      color: #ff5353; }
+
+.nav_mobile {
+  margin: 10px;
+  width: 20px;
+  height: 3px;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+  .nav_mobile:before, .nav_mobile:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: black;
+    margin: 7px 0; }
+  .nav_mobile:before {
+    bottom: 0px; }
 
 /*lower header*/
 .lower_header {

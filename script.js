@@ -5,6 +5,16 @@ let poping_button = [];
 let current = [false, false, false];
 let previous = [false, false, false];
 
+let menu_button = document.getElementById("menu_button");
+let menu_body = document.getElementById("menu_body")
+menu_button.addEventListener("click", () => {
+	if(menu_body.style.display === "flex"){
+		menu_body.style.display = "none"
+	}else{
+		menu_body.style.display = "flex"
+	}
+})
+
 let somefunc = (poping_button, the_button, i) => {
 	current[i] = true;
 };
