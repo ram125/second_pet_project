@@ -104,7 +104,8 @@ body {
   background: black;
   display: flex;
   flex-direction: row;
-  position: relative; }
+  position: relative;
+  display: none; }
   .nav_mobile:before, .nav_mobile:after {
     position: absolute;
     content: "";
@@ -652,6 +653,9 @@ footer {
 
   .featured_product .products, .tp_row .products {
     width: 90%; }
+
+  .nav_mobile {
+    display: flex; }
 
   .mp_cards .products, .featured_product .products {
     margin: 0; }

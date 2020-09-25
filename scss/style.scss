@@ -134,6 +134,7 @@ $grey_color: #888888;
 	display: flex;
 	flex-direction: row;
 	position: relative;
+	display: none;
 	&:before, &:after{
 		position: absolute;
 		content: "";
@@ -844,6 +845,10 @@ footer{
 		.products{
 			width: 90%;
 		}
+	}
+
+	.nav_mobile{
+		display: flex;
 	}
 
 	.mp_cards, .featured_product{
