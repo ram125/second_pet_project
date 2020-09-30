@@ -8,10 +8,14 @@ let previous = [false, false, false];
 let menu_button = document.getElementById("menu_button");
 let menu_body = document.getElementById("menu_body")
 menu_button.addEventListener("click", () => {
-	if(menu_body.style.display === "flex"){
-		menu_body.style.display = "none"
+	if(menu_button.classList.contains("mobile_active")){
+		menu_body.style.height = "0px"
+		menu_body.style.fontSize = "0"
+		menu_button.classList.remove("mobile_active")
 	}else{
-		menu_body.style.display = "flex"
+		menu_body.style.height = "150px"
+		menu_body.style.fontSize = "15px"
+		menu_button.classList.add("mobile_active")
 	}
 })
 

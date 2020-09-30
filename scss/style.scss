@@ -63,15 +63,16 @@ $grey_color: #888888;
 }
 
 .home_menu, .mobile_menu{
-	height: 150px;
+	height: 0px;
 	width: 200px;
-	display: none;
 	background: white;
 	position: absolute;
-	bottom: -150px;
+	top: 50px;
 	list-style-type: none;
 	flex-direction: column;
+	font-size: 0;
 	color: black;
+	transition: .2s height ease;
 	li{
 		padding: auto 0;
 		padding-left: 10px;
@@ -93,7 +94,7 @@ $grey_color: #888888;
 
 .mobile_menu{
 	width: 100px;
-	bottom: -188px;
+	bottom: -180px;
 	left: -40px;
 	z-index: 10;
 	li{
@@ -127,24 +128,45 @@ $grey_color: #888888;
 }
 
 .nav_mobile{
-	margin: 10px;
-	width: 20px;
-	height: 3px;
-	background: black;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	position: relative;
 	display: none;
-	&:before, &:after{
-		position: absolute;
-		content: "";
-		width: 20px;
-		height: 3px;
-		background: black;
-		margin: 7px 0;
+	margin-right: 10px;
+}
+
+.first{
+	transform-origin: top left;
+	transition: .2s transform ease;
+}
+
+.second{
+	margin: 3px 0;
+	transition: .2s opacity ease, .2s margin-left ease;
+}
+
+.third{
+	transform-origin: bottom left;
+	transition: .2s transform ease;
+}
+
+.mobile_menu_line{
+	height: 5px;
+	width: 25px;
+	background: black;
+	border-radius: 3px;
+}
+
+.mobile_active{
+	.first{
+		transform: translateX(6px) rotate(45deg)
 	}
-	&:before{
-		bottom: 0px;
+	.second{
+		margin-left: -25px;
+		opacity: 0;
+	}
+	.third{
+		transform: translateX(6px) rotate(-45deg)
 	}
 }
 
